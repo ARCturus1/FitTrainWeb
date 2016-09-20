@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace EntityFramework.CodeFirst.Entities
 {
     public abstract class BaseEntity
-    {
+    { 
         private DateTime _addedDate;
         [Key]
         [Required]
