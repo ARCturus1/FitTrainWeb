@@ -1,1 +1,1 @@
-﻿
+﻿angular.module('app', ['ui.bootstrap', 'fitTraining.athorization']);

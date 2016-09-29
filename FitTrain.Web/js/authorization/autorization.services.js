@@ -1,1 +1,1 @@
-﻿
+﻿angular.module('fitTraining.athorization.services', []);

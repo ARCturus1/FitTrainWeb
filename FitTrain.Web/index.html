@@ -1,10 +1,27 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
-<body>
-    Hello
+<body class="nav" ng-app="app">
+    <div ng-view>
+    </div>
 </body>
 </html>
+<section name="scripts">
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-touch.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/authorization/autorization.services.js"></script>
+    <script src="js/authorization/autorization.controller.js"></script>
+    <script src="js/authorization/autorization.js"></script>
+    <script src="js/app.js"></script>
+</section>
