@@ -1,0 +1,27 @@
+﻿<section name="register">
+    <!--<link href="js/authorization/css/athorization.css" rel="stylesheet"/>-->
+    <form ng-submit="register.authorization.register()">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for>Имя пользователя</label>
+            <input type="text" class="form-control" placeholder="Username" data-ng-model="register.authorization.userName" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for>Email</label>
+            <input type="text" class="form-control" placeholder="Email" data-ng-model="register.authorization.email" required >
+        </div>
+        <div class="form-group">
+            <label for>Пароль</label>
+            <input type="password" class="form-control" placeholder="Password" data-ng-model="register.authorization.password" required>
+        </div>
+        <div class="form-group">
+            <label for>Подтверждение пароля</label>
+            <input type="password" class="form-control" placeholder="Password confirm" data-ng-model="register.authorization.confirmPassword" required>
+        </div>
+        <p><button class="btn btn-info" type="submit">Register</button>
+        </p>
+        <div data-ng-hide="register.message == ''" class="alert alert-danger">
+            {{register.message}}
+        </div>
+    </form>
+</section>
