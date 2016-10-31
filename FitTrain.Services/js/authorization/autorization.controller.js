@@ -20,7 +20,7 @@ angular.module('fitTraining.athorization.controller', [])
             }
 
             this.authorization.register = function () {
-                authService.saveRegistration($scope.authorization).then(function (response) {
+                authService.saveRegistration(self.authorization).then(function (response) {
 
                     self.authorization.savedSuccessfully = true;
                     self.authorization.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";

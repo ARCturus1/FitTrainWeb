@@ -43,13 +43,13 @@ namespace FitTrain.Services
 
     public class AuthRepository : IDisposable
     {
-        private ApplicationDbContext _ctx;
+        private FitTrainDbContext _ctx;
 
         private UserManager<ApplicationUser> _userManager;
 
         public AuthRepository()
         {
-            _ctx = new ApplicationDbContext();
+            _ctx = new FitTrainDbContext();
             _userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_ctx));
         }
 

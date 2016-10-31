@@ -74,10 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="FitTrainDbContext.cs" />
-    <Compile Include="Migrations\ApplicationDbInitializer.cs" />
+    <Compile Include="Migrations\201610311836402_migrate.cs" />
+    <Compile Include="Migrations\201610311836402_migrate.Designer.cs">
+      <DependentUpon>201610311836402_migrate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,7 +88,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataBase\" />
+    <EmbeddedResource Include="Migrations\201610311836402_migrate.resx">
+      <DependentUpon>201610311836402_migrate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\db.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
