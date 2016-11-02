@@ -13,7 +13,7 @@ namespace FitTrain.DataLayer.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201610311836402_migrate"; }
+            get { return "201611021754304_migrate"; }
         }
         
         string IMigrationMetadata.Source

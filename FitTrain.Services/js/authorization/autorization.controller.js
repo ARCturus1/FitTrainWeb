@@ -8,11 +8,15 @@ angular.module('fitTraining.athorization.controller', [])
                     userName: "",
                     email: "",
                     password: "",
-                    confirmPassword: ""
+                    confirmPassword: "",
+                    birthDate: "",
+                    weight: "",
+                    gender: ""
                 };
                 self.message = '';
             }();
             var startTimer = function () {
+                debugger;
                 var timer = $timeout(function () {
                     $timeout.cancel(timer);
                     $location.path('/login');
@@ -20,10 +24,10 @@ angular.module('fitTraining.athorization.controller', [])
             }
 
             this.authorization.register = function () {
+                debugger;
                 authService.saveRegistration(self.authorization).then(function (response) {
-
-                    self.authorization.savedSuccessfully = true;
-                    self.authorization.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";
+                    self.savedSuccessfully = true;
+                    self.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";
                     startTimer();
 
                 },
@@ -36,7 +40,7 @@ angular.module('fitTraining.athorization.controller', [])
                                 }
                             }
                         }
-                        self.authorization.message = "Failed to register user due to:" + errors.join(' ');
+                        self.message = "Failed to register user due to:" + errors.join(' ');
                     });
             }
         }
