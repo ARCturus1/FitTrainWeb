@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitTrain.Services", "FitTra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitTrain.DataLayer", "FitTrain.DataLayer\FitTrain.DataLayer.csproj", "{7164038D-D791-46ED-BBF1-57E62DB960D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitTrain.Logic", "FitTrain.Logic\FitTrain.Logic.csproj", "{6659D4AC-A82A-41EF-8478-65533A069AEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7164038D-D791-46ED-BBF1-57E62DB960D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7164038D-D791-46ED-BBF1-57E62DB960D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7164038D-D791-46ED-BBF1-57E62DB960D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6659D4AC-A82A-41EF-8478-65533A069AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6659D4AC-A82A-41EF-8478-65533A069AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6659D4AC-A82A-41EF-8478-65533A069AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6659D4AC-A82A-41EF-8478-65533A069AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

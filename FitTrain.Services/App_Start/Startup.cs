@@ -7,6 +7,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using EntityFramework.CodeFirst;
 using FitTrain.DataLayer;
+using FitTrain.Domain.Models;
 using FitTrain.Services.Models;
 using FitTrain.Services.Providers;
 using Owin;

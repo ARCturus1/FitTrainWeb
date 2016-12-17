@@ -1,7 +1,9 @@
 ﻿'use strict';
 angular.module('fitTraining.athorization.controller', [])
     .controller('RegisterController', [
-        'authService', function (authService) {
+        '$timeout',
+        '$location',
+        'authService', function ($timeout, $location, authService) {
             var self = this;
             var _init = function () {
                 self.authorization = {
@@ -10,21 +12,20 @@ angular.module('fitTraining.athorization.controller', [])
                     password: "",
                     confirmPassword: "",
                     birthDate: "",
-                    weight: "",
-                    gender: ""
+                    //weight: "",
+                    //gender: ""
                 };
                 self.message = '';
             }();
+
             var startTimer = function () {
-                debugger;
                 var timer = $timeout(function () {
                     $timeout.cancel(timer);
-                    $location.path('/login');
+                    $location.path('/');
                 }, 2000);
             }
 
             this.authorization.register = function () {
-                debugger;
                 authService.saveRegistration(self.authorization).then(function (response) {
                     self.savedSuccessfully = true;
                     self.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";
@@ -43,18 +44,6 @@ angular.module('fitTraining.athorization.controller', [])
                         self.message = "Failed to register user due to:" + errors.join(' ');
                     });
             }
-        }
-    ])
-    .controller('IndexController', [
-        '$scope', '$location', 'authService', function ($scope, $location, authService) {
-            $scope.logOut = function () {
-                authService.logOut();
-                //$location.path('/home');
-                window.history.back();
-            }
-            $scope.authentication = authService.authentication;
-
-            //$scope.links = [{ name: 'Home', url: '#/home'}, { name: 'News', url: '#/news'}];
         }
     ])
     .controller('SignupController', [

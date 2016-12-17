@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using FitTrain.DataLayer;
+using FitTrain.Domain.Models;
 using Microsoft.Owin.Security.OAuth;
 
 namespace FitTrain.Services.Providers

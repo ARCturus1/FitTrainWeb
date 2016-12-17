@@ -2,7 +2,8 @@
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when("/login", {
-        templateUrl: "js/authorization/views/login.html"
+        templateUrl: "js/authorization/views/login.html",
+        controller: "LoginController"
     })
     .when("/register", {
         templateUrl: "js/authorization/views/register.html",

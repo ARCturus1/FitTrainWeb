@@ -1036,6 +1036,10 @@
       <Project>{7164038D-D791-46ED-BBF1-57E62DB960D8}</Project>
       <Name>FitTrain.DataLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FitTrain.Domain\FitTrain.Domain.csproj">
+      <Project>{44064575-551C-445F-A933-00F70419E79E}</Project>
+      <Name>FitTrain.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
