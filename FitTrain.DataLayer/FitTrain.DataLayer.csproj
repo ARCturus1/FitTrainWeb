@@ -76,6 +76,14 @@
   <ItemGroup>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="FitTrainDbContext.cs" />
+    <Compile Include="Migrations\201612171229078_migrate.cs" />
+    <Compile Include="Migrations\201612171229078_migrate.Designer.cs">
+      <DependentUpon>201612171229078_migrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612171232329_migrate1.cs" />
+    <Compile Include="Migrations\201612171232329_migrate1.Designer.cs">
+      <DependentUpon>201612171232329_migrate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +101,14 @@
       <Project>{44064575-551c-445f-a933-00f70419e79e}</Project>
       <Name>FitTrain.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612171229078_migrate.resx">
+      <DependentUpon>201612171229078_migrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612171232329_migrate1.resx">
+      <DependentUpon>201612171232329_migrate1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

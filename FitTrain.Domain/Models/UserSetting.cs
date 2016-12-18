@@ -15,13 +15,14 @@ namespace FitTrain.Domain.Models
         public decimal Height { get; set; }
         public ActivityOfHuman ActivityOfHuman { get; set; }
 
-        public int ApplicationUserId { get; set; }
+        [ForeignKey("ApplicationUser")]
+        public string ApplicationUserId { get; set; }
 
-        [ForeignKey("Id")]
-        [InverseProperty("UserSettings")]
-        public ApplicationUser ApplicationUser { get; set; }
+        
+        //[InverseProperty("UserSettings")]
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         [NotMapped]
-        public decimal Dci => DietHelper.GetDci(Weight, Height, ApplicationUser.Age, ApplicationUser.Gender, ActivityOfHuman);
+        public virtual decimal Dci => DietHelper.GetDci(Weight, Height, ApplicationUser.Age, ApplicationUser.Gender, ActivityOfHuman);
     }
 }

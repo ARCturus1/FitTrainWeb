@@ -14,7 +14,7 @@ namespace FitTrain.DataLayer
 {
     public class FitTrainDbContext : IdentityDbContext<ApplicationUser>
     {
-        //public DbSet<UserSetting> UserSettings { get; set; }
+        public DbSet<UserSetting> UserSettings { get; set; }
         //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         
 
@@ -28,11 +28,22 @@ namespace FitTrain.DataLayer
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        //    modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+        //    // Add configuration here
 
         //    modelBuilder.Entity<UserSetting>()
-        //        .HasRequired(e => e.User)
+        //        .HasKey(e => e.Id);
+
+        //    modelBuilder.Entity<ApplicationUser>()
+        //        .HasKey(e => e.Id);
+
+        //    modelBuilder.Entity<UserSetting>()
+        //        .HasRequired(e => e.ApplicationUser)
         //        .WithMany()
-        //        .HasForeignKey(e => e.UserId);
+        //        .HasForeignKey(e => e.ApplicationUserId );
+
+        //    base.OnModelCreating(modelBuilder);
         //}
     }
 }
