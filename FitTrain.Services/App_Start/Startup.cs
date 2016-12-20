@@ -59,7 +59,9 @@ namespace FitTrain.Services
             ApplicationUser user = new ApplicationUser
             {
                 UserName = userModel.UserName,
-                Email = userModel.Email
+                Email = userModel.Email,
+                BirthDate = userModel.BirthDate,
+                Gender = userModel.Gender
             };
 
             var result = await _userManager.CreateAsync(user, userModel.Password);

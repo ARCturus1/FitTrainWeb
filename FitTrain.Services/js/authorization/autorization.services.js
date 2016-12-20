@@ -1,6 +1,9 @@
 ﻿angular.module('fitTraining.athorization.services', [])
     .factory('authService', [
-        '$http', '$q', 'localStorageService', function($http, $q, localStorageService) {
+        '$http',
+        '$q',
+        'localStorageService',
+        function ($http, $q, localStorageService) {
             console.log('in authService');
             var serviceBase = '';
             var authServiceFactory = {};
@@ -73,7 +76,10 @@
         }
     ])
     .factory('authInterceptorService', [
-        '$q', '$location', 'localStorageService', function($q, $location, localStorageService) {
+        '$q',
+        '$location',
+        'localStorageService',
+        function ($q, $location, localStorageService) {
 
             var authInterceptorServiceFactory = {};
 

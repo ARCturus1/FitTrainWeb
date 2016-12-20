@@ -7,8 +7,9 @@ namespace FitTrain.Domain.Models
     public class ApplicationUser : IdentityUser
     {
         public DateTime BirthDate { get; set; }
-        public int Age { get; set; }
         public ICollection<UserSetting> UserSettings { get; set; }
         public bool Gender { get; set; }
+
+        public virtual int Age => DateTime.Now.Year - BirthDate.Year;
     }
 }

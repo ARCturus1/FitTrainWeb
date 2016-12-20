@@ -54,9 +54,9 @@
                     </span>
                 </div>
                 <div ng-show="!authentication || !authentication.isAuth" class="nav navbar-nav navbar-right">
-                    <span>
-                        <a href="#/login">войти</a>
-                    </span>
+                    <a href="#/login">войти</a>
+                    <span> или </span>
+                    <a href="#/register">зарегистрироваться</a>
                 </div>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -79,5 +79,8 @@
     <script src="js/authorization/autorization.services.js"></script>
     <script src="js/authorization/autorization.controller.js"></script>
     <script src="js/authorization/autorization.js"></script>
+    <script src="js/userspace/userspace.services.js"></script>
+    <script src="js/userspace/userspace.controller.js"></script>
+    <script src="js/userspace/userspace.js"></script>
     <script src="js/app.js"></script>
 </section>

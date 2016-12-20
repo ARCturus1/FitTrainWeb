@@ -7,13 +7,13 @@ namespace FitTrain.DataLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class migrate : IMigrationMetadata
+    public sealed partial class migrate1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migrate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(migrate1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612171229078_migrate"; }
+            get { return "201612201401410_migrate1"; }
         }
         
         string IMigrationMetadata.Source
