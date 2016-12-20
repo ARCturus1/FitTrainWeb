@@ -7,12 +7,14 @@ namespace FitTrain.DataLayer.Migrations
     {
         public override void Up()
         {
-            DropColumn("dbo.AspNetUsers", "Age");
+            DropIndex("dbo.UserSettings", new[] { "Id" });
+            CreateIndex("dbo.UserSettings", "ApplicationUserId");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.AspNetUsers", "Age", c => c.Int(nullable: false));
+            DropIndex("dbo.UserSettings", new[] { "Id" });
+            CreateIndex("dbo.UserSettings", "ApplicationUserId");
         }
     }
 }

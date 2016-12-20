@@ -1,19 +1,21 @@
 ﻿<form role="form">
     <h2>Login</h2>
     <div class="form-group">
-        <label for="userName">Имя пользователя</label>
-        <input id="userName" type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
-    </div>
-    <div class="form-group">
-        <label for="password">Пароль</label>
-        <input id="password" type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
-    </div>
-    <div class="form-group">
         <label for>Вес</label>
-        <input type="text" class="form-control" placeholder="Вес" data-ng-model="register.authorization.weight" required autofocus>
+        <input type="number" step="0.1" class="form-control" ng-model="space.weight" required autofocus>
     </div>
-    <p><button class="btn btn-info" type="submit" data-ng-click="login()">Login</button></p>
-    <div data-ng-hide="message == ''" class="alert alert-danger">
-        {{message}}
+    <div class="form-group">
+        <label for>Рост</label>
+        <input type="number" step="0.01" class="form-control" ng-model="space.height" required>
+    </div>
+    <div class="form-group">
+        <label for>Активность</label>
+        <select ng-model="space.activity" class="form-control" ng-options="option.value for option in vm.activityList track by option.id">
+        </select>
+    </div>
+    <p><button class="btn btn-info" type="submit" ng-click="vm.addSettings()">Добавить</button>
+    </p>
+    <div ng-hide="vm.message == ''" class="alert alert-danger">
+        {{vm.message}}
     </div>
 </form>

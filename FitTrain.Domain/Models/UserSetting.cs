@@ -9,12 +9,15 @@ namespace FitTrain.Domain.Models
     public class UserSetting
     {
         [Key]
-        public Guid Id { get; set; }
+        [Required]
+        public int Id { get; set; }
 
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
         public ActivityOfHuman ActivityOfHuman { get; set; }
+        public DateTime AddedDate { get; set; }
 
+        [Index]
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
 
@@ -23,6 +26,13 @@ namespace FitTrain.Domain.Models
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [NotMapped]
-        public virtual decimal Dci => DietHelper.GetDci(Weight, Height, ApplicationUser.Age, ApplicationUser.Gender, ActivityOfHuman);
+        public virtual decimal Dci
+        {
+            get {
+                if (ApplicationUser != null)
+                    return DietHelper.GetDci(Weight, Height, ApplicationUser.Age, ApplicationUser.Gender, ActivityOfHuman);
+                return 0m;
+            }
+        }
     }
 }

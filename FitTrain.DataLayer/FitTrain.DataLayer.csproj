@@ -76,13 +76,13 @@
   <ItemGroup>
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="FitTrainDbContext.cs" />
-    <Compile Include="Migrations\201612201232253_migrate.cs" />
-    <Compile Include="Migrations\201612201232253_migrate.Designer.cs">
-      <DependentUpon>201612201232253_migrate.cs</DependentUpon>
+    <Compile Include="Migrations\201612202209301_migrate.cs" />
+    <Compile Include="Migrations\201612202209301_migrate.Designer.cs">
+      <DependentUpon>201612202209301_migrate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612201401410_migrate1.cs" />
-    <Compile Include="Migrations\201612201401410_migrate1.Designer.cs">
-      <DependentUpon>201612201401410_migrate1.cs</DependentUpon>
+    <Compile Include="Migrations\201612202228208_migrate1.cs" />
+    <Compile Include="Migrations\201612202228208_migrate1.Designer.cs">
+      <DependentUpon>201612202228208_migrate1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,11 +103,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612201232253_migrate.resx">
-      <DependentUpon>201612201232253_migrate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612202209301_migrate.resx">
+      <DependentUpon>201612202209301_migrate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612201401410_migrate1.resx">
-      <DependentUpon>201612201401410_migrate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612202228208_migrate1.resx">
+      <DependentUpon>201612202228208_migrate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

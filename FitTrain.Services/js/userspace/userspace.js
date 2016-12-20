@@ -2,6 +2,11 @@
     .config([
         '$routeProvider', function ($routeProvider) {
             $routeProvider
+                .when("/",
+                {
+                    templateUrl: "js/userspace/views/userspace.html",
+                    controller: "UserspaceController"
+                })
                 .when("/userspace",
                 {
                     templateUrl: "js/userspace/views/userspace.html",

@@ -6,7 +6,7 @@ angular.module('fitTraining.userspace.services', [])
         function($http) {
             return {
                 postSettins: function(weight, height, activity) {
-                    return $http.post('api/UserSettings', { Weight: weight, Height: height, ActivityOfHuman: activity });
+                    return $http.post('api/UserSettings', { Weight: weight, Height: height, ActivityOfHuman: activity.id });
                 }
             }
         }

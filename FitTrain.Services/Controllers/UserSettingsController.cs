@@ -7,10 +7,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Security;
 using FitTrain.DataLayer;
 using FitTrain.Domain.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace FitTrain.Services.Controllers
 {
@@ -39,7 +44,7 @@ namespace FitTrain.Services.Controllers
 
         // PUT: api/UserSettings/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUserSetting(Guid id, UserSetting userSetting)
+        public async Task<IHttpActionResult> PutUserSetting(int id, UserSetting userSetting)
         {
             if (!ModelState.IsValid)
             {
@@ -74,6 +79,7 @@ namespace FitTrain.Services.Controllers
 
         // POST: api/UserSettings
         [ResponseType(typeof(UserSetting))]
+        [Authorize]
         public async Task<IHttpActionResult> PostUserSetting(UserSetting userSetting)
         {
             if (!ModelState.IsValid)
@@ -81,13 +87,17 @@ namespace FitTrain.Services.Controllers
                 return BadRequest(ModelState);
             }
 
+            UserManager<ApplicationUser> manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            userSetting.ApplicationUserId = manager.FindByName(User.Identity.Name)?.Id;
+            userSetting.AddedDate = DateTime.Now;
+            
             db.UserSettings.Add(userSetting);
 
             try
             {
                 await db.SaveChangesAsync();
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException e)
             {
                 if (UserSettingExists(userSetting.Id))
                 {
@@ -95,11 +105,11 @@ namespace FitTrain.Services.Controllers
                 }
                 else
                 {
-                    throw;
+                    throw e;
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = userSetting.Id }, userSetting);
+            return Ok();
         }
 
         // DELETE: api/UserSettings/5
@@ -127,7 +137,7 @@ namespace FitTrain.Services.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserSettingExists(Guid id)
+        private bool UserSettingExists(int id)
         {
             return db.UserSettings.Count(e => e.Id == id) > 0;
         }
