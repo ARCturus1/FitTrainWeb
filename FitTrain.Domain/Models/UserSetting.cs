@@ -34,5 +34,38 @@ namespace FitTrain.Domain.Models
                 return 0m;
             }
         }
+
+        [NotMapped]
+        public virtual decimal Proteins
+        {
+            get
+            {
+                if (ApplicationUser != null)
+                    return DietHelper.GetProteins(Weight);
+                return 0m;
+            }
+        }
+
+        [NotMapped]
+        public virtual decimal Fats
+        {
+            get
+            {
+                if (ApplicationUser != null)
+                    return DietHelper.GetFats(Dci);
+                return 0m;
+            }
+        }
+
+        [NotMapped]
+        public virtual decimal Carbs
+        {
+            get
+            {
+                if (ApplicationUser != null)
+                    return DietHelper.GetCarbo(Weight, Height, ApplicationUser.Age, ApplicationUser.Gender, ActivityOfHuman);
+                return 0m;
+            }
+        }
     }
 }

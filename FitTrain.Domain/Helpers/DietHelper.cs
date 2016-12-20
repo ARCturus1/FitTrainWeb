@@ -7,9 +7,41 @@ namespace FitTrain.Logic.Helpers
     {
         public static decimal GetDci(decimal weight, decimal height, int age, bool gender, ActivityOfHuman activity)
         {
-            var agePrefix = gender ? 5 : -160;
-
+            var agePrefix = gender ? 5 : - 160;
             return Math.Round(((weight*10) + (height*6.25m) - (age*5) + agePrefix)*GetActivityValue(activity));
+        }
+
+        public static decimal GetProteins(decimal weight)
+        {
+            return weight * 1.5m;
+        }
+
+        public static decimal GetFats(decimal dci)
+        {
+            return Math.Round(dci * 0.12m / 9.2m);
+        }
+
+        public static decimal GetProteinsK(decimal weight)
+        {
+            return weight * 1.5m * 4.6m;
+        }
+
+        public static decimal GetFatsK(decimal dci)
+        {
+            return Math.Round(dci * 0.12m);
+        }
+
+        public static decimal GetCarboK(decimal weight, decimal height, int age, bool gender, ActivityOfHuman activity)
+        {
+            var dci = GetDci(weight, height, age, gender, activity);
+            var proteins = GetProteinsK(weight);
+            var fats = GetFatsK(dci);
+            return dci - proteins - fats;
+        }
+
+        public static decimal GetCarbo(decimal weight, decimal height, int age, bool gender, ActivityOfHuman activity)
+        {
+            return GetCarboK(weight, height, age, gender, activity) / 4.6m;
         }
 
         private static decimal GetActivityValue(ActivityOfHuman activity)
