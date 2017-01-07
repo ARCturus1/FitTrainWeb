@@ -1,4 +1,4 @@
-﻿angular.module('app', ['ngRoute', 'angular-loading-bar', 'LocalStorageModule', 'ui.bootstrap', 'fitTraining.athorization', 'fitTraining.userspace'])
+﻿angular.module('app', ['ngRoute', 'angular-loading-bar', 'ui.bootstrap', 'fitTraining.athorization', 'fitTraining.userspace'])
     .config([
         '$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
             $routeProvider

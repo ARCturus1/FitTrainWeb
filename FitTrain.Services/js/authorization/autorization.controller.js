@@ -103,9 +103,9 @@ angular.module('fitTraining.athorization.controller', [])
                 authService.login($scope.loginData).then(function (response) {
                     $location.path('/home');
                 },
-                    function (err) {
-                        $scope.message = err.error_description;
-                    });
+                function (err) {
+                    $scope.message = err.error_description;
+                });
             };
 
         }

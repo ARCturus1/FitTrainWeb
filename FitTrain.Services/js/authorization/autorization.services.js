@@ -1,9 +1,9 @@
-﻿angular.module('fitTraining.athorization.services', [])
+﻿angular.module('fitTraining.athorization.services', ['ngCookies'])
     .factory('authService', [
         '$http',
         '$q',
-        'localStorageService',
-        function ($http, $q, localStorageService) {
+        '$cookies',
+        function ($http, $q, $cookies) {
             console.log('in authService');
             var serviceBase = '';
             var authServiceFactory = {};
@@ -14,13 +14,13 @@
             };
 
             var logOut = function () {
-                localStorageService.remove('authorizationData');
+                $cookies.remove('authorizationData');
                 authentication.isAuth = false;
                 authentication.userName = "";
             };
 
             var fillAuthData = function () {
-                var authData = localStorageService.get('authorizationData');
+                var authData = $cookies.getObject('authorizationData');
                 if (authData) {
                     authentication.isAuth = true;
                     authentication.userName = authData.userName;
@@ -38,8 +38,9 @@
                 var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
                 var deferred = $q.defer();
 
-                $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
-                    localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+                $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+                .success(function (response) {
+                    $cookies.putObject('authorizationData', { token: response.access_token, userName: loginData.userName });
                     authentication.isAuth = true;
                     authentication.userName = loginData.userName;
                     deferred.resolve(response);
@@ -49,7 +50,7 @@
                 });
                 return deferred.promise;
             };
-            
+
             authServiceFactory.saveRegistration = saveRegistration;
             authServiceFactory.login = login;
             authServiceFactory.logOut = logOut;
@@ -62,13 +63,14 @@
     .factory('authInterceptorService', [
         '$q',
         '$location',
-        'localStorageService',
-        function ($q, $location, localStorageService) {
+        '$cookies',
+        function ($q, $location, $cookies) {
+            debugger;
             var authInterceptorServiceFactory = {};
 
             var request = function (config) {
                 config.headers = config.headers || {};
-                var authData = localStorageService.get('authorizationData');
+                var authData = $cookies.getObject('authorizationData');
                 if (authData) {
                     config.headers.Authorization = 'Bearer ' + authData.token;
                 }
