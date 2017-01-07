@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace FitTrain.Domain.Models
+namespace FitTrain.Domain.Entities
 {
     public class ApplicationUser : IdentityUser
     {

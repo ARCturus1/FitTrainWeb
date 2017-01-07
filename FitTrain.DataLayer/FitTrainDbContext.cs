@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FitTrain.DataLayer.Migrations;
-using FitTrain.Domain.Models;
+using FitTrain.Domain.Entities;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace FitTrain.DataLayer

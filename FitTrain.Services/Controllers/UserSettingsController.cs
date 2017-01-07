@@ -12,7 +12,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Web.Security;
 using FitTrain.DataLayer;
-using FitTrain.Domain.Models;
+using FitTrain.Domain.Entities;
+using FitTrain.Domain.Enums;
+using FitTrain.Logic.Factories;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -40,6 +42,19 @@ namespace FitTrain.Services.Controllers
             }
 
             return Ok(userSetting);
+        }
+
+        [ResponseType(typeof(UserSetting))]
+        public async Task<IHttpActionResult> GetUserSettingByMode(DietMode mode)
+        {
+            UserSetting userSetting = await db.UserSettings.OrderByDescending(x => x.AddedDate).FirstOrDefaultAsync();
+            if (userSetting == null)
+            {
+                return NotFound();
+            }
+            DietModelFactory dietModelFactory = new DietModelFactory();
+            
+            return Ok(dietModelFactory.CreateDietModel(mode, userSetting));
         }
 
         // PUT: api/UserSettings/5

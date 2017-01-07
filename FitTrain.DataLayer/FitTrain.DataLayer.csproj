@@ -74,7 +74,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="FitTrainDbContext.cs" />
     <Compile Include="Migrations\201612202209301_migrate.cs" />
     <Compile Include="Migrations\201612202209301_migrate.Designer.cs">

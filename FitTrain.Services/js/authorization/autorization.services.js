@@ -65,7 +65,6 @@
         '$location',
         '$cookies',
         function ($q, $location, $cookies) {
-            debugger;
             var authInterceptorServiceFactory = {};
 
             var request = function (config) {

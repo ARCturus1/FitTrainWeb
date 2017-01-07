@@ -1048,6 +1048,10 @@
       <Project>{44064575-551C-445F-A933-00F70419E79E}</Project>
       <Name>FitTrain.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FitTrain.Logic\FitTrain.Logic.csproj">
+      <Project>{6659d4ac-a82a-41ef-8478-65533a069aec}</Project>
+      <Name>FitTrain.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="js\userspace\views\userspace.html" />

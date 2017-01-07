@@ -65,16 +65,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\DietMode.cs" />
     <Compile Include="Helpers\DietHelper.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Enums\ActivityOfHuman.cs" />
+    <Compile Include="Interfaces\IUserSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\UserSetting.cs" />
+    <Compile Include="Entities\UserSetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
