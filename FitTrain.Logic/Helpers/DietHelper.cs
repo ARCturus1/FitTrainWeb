@@ -106,7 +106,7 @@ namespace FitTrain.Logic.Helpers
 
         private decimal GetProteins()
         {
-            return _weight * ProteinsDaylyNorm;
+            return Math.Round(_weight * ProteinsDaylyNorm);
         }
 
         private decimal GetFats()
@@ -134,7 +134,7 @@ namespace FitTrain.Logic.Helpers
 
         private decimal GetCarbo()
         {
-            return GetCarboK() / CarbEnergy;
+            return Math.Round(GetCarboK() / CarbEnergy);
         }
 
         private decimal GetActivityValue(ActivityOfHuman activity)

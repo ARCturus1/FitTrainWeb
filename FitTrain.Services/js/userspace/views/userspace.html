@@ -1,6 +1,38 @@
 ﻿<section name="userspace">
+    <link href="/js/userspace/css/style.css" rel="stylesheet" />
     <div>
-        
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'1'">Left</label>
+            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'2'">Middle</label>
+            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'3'">Right</label>
+        </div>
+        <div class="userspace" ng-if="model.settings != null">
+            <table>
+                <tr>
+                    <td>Вес:</td>
+                    <td>{{model.settings.weight}},кг.</td>
+                </tr>
+                <tr>
+                    <td>Дневная норма калорийности:</td>
+                    <td>{{model.settings.dci}},Ккал.</td>
+                </tr>
+                <tr>
+                    <td>Дневная норма углеводов:</td>
+                    <td>{{model.settings.carbs}},гр.</td>
+                </tr>
+                <tr>
+                    <td>Дневная норма белков:</td>
+                    <td>{{model.settings.proteins}},гр.</td>
+                </tr>
+                <tr>
+                    <td>Дневная норма жиров:</td>
+                    <td>{{model.settings.fats}},гр.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div ng-hide="vm.message == ''" class="alert alert-danger">
+        {{vm.message}}
     </div>
     <a class="btn btn-success" href="#/newUserSpace">Добавить параметры</a>
 </section>

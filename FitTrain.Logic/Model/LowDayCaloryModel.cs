@@ -11,7 +11,7 @@ namespace FitTrain.Logic.Model
         {
             FillToObject(setting);
             _dietCalculator = new DietCalculator(setting.Weight, setting.Height, setting.ApplicationUser.Age,
-                setting.ApplicationUser.Gender, setting.ActivityOfHuman, 0);
+                setting.ApplicationUser.Gender, setting.ActivityOfHuman, -0.10);
         }
 
         public override decimal Dci => _dietCalculator.Dci;

@@ -33,7 +33,7 @@ namespace FitTrain.Services.Controllers
 
         // GET: api/UserSettings/5
         [ResponseType(typeof(UserSetting))]
-        public async Task<IHttpActionResult> GetUserSetting(Guid id)
+        public async Task<IHttpActionResult> GetUserSetting(int id)
         {
             UserSetting userSetting = await db.UserSettings.FindAsync(id);
             if (userSetting == null)
@@ -44,8 +44,10 @@ namespace FitTrain.Services.Controllers
             return Ok(userSetting);
         }
 
+        [Route("api/UserSettings/GetUserSettingByMode")]
+        [HttpGet]
         [ResponseType(typeof(UserSetting))]
-        public async Task<IHttpActionResult> GetUserSettingByMode(DietMode mode)
+        public async Task<IHttpActionResult> GetUserSettingByMode(int mode)
         {
             UserSetting userSetting = await db.UserSettings.OrderByDescending(x => x.AddedDate).FirstOrDefaultAsync();
             if (userSetting == null)
@@ -54,7 +56,7 @@ namespace FitTrain.Services.Controllers
             }
             DietModelFactory dietModelFactory = new DietModelFactory();
             
-            return Ok(dietModelFactory.CreateDietModel(mode, userSetting));
+            return Ok(dietModelFactory.CreateDietModel((DietMode)mode, userSetting));
         }
 
         // PUT: api/UserSettings/5
@@ -129,7 +131,7 @@ namespace FitTrain.Services.Controllers
 
         // DELETE: api/UserSettings/5
         [ResponseType(typeof(UserSetting))]
-        public async Task<IHttpActionResult> DeleteUserSetting(Guid id)
+        public async Task<IHttpActionResult> DeleteUserSetting(int id)
         {
             UserSetting userSetting = await db.UserSettings.FindAsync(id);
             if (userSetting == null)
