@@ -14,7 +14,10 @@ namespace FitTrain.DataLayer
 {
     public class FitTrainDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<DietDay> DietDays { get; set; }
+        public DbSet<DietPeriod> DietPeriods { get; set; }
         public DbSet<UserSetting> UserSettings { get; set; }
+        
         //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         
 
