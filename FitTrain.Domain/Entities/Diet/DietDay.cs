@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using FitTrain.Domain.Enums;
 
-namespace FitTrain.Domain.Entities
+namespace FitTrain.Domain.Entities.Diet
 {
     public class DietDay
     {

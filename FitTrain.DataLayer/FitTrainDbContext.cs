@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using FitTrain.DataLayer.Migrations;
 using FitTrain.Domain.Entities;
+using FitTrain.Domain.Entities.Diet;
+using FitTrain.Domain.Entities.Training;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace FitTrain.DataLayer
@@ -17,6 +19,9 @@ namespace FitTrain.DataLayer
         public DbSet<DietDay> DietDays { get; set; }
         public DbSet<DietPeriod> DietPeriods { get; set; }
         public DbSet<UserSetting> UserSettings { get; set; }
+        public DbSet<Approach> Approaches { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<Training> Trainings { get; set; }
         
         //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         

@@ -65,9 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\DietDay.cs" />
-    <Compile Include="Entities\DietPeriod.cs" />
+    <Compile Include="Entities\Diet\DietDay.cs" />
+    <Compile Include="Entities\Diet\DietPeriod.cs" />
+    <Compile Include="Entities\Training\Approach.cs" />
+    <Compile Include="Entities\Training\Exercise.cs" />
+    <Compile Include="Entities\Training\Training.cs" />
     <Compile Include="Enums\DietMode.cs" />
+    <Compile Include="Enums\MusscleGroup.cs" />
     <Compile Include="Helpers\DietHelper.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Enums\ActivityOfHuman.cs" />

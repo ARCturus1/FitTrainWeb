@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\DietModelFactory.cs" />
-    <Compile Include="Helpers\DietHelper.cs" />
+    <Compile Include="Helpers\DietCalculator.cs" />
     <Compile Include="Model\HighDayCaloryModel.cs" />
     <Compile Include="Model\LowDayCaloryModel.cs" />
     <Compile Include="Model\NormalDayCaloryModel.cs" />
