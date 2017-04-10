@@ -33,6 +33,8 @@ namespace FitTrain.DataLayer
 
         public FitTrainDbContext() : base("FitTrainDbContext") { }
 
+        public System.Data.Entity.DbSet<FitTrain.Domain.Entities.Training.ExerciseType> ExerciseTypes { get; set; }
+
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

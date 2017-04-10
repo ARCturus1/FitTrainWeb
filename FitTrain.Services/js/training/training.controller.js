@@ -3,7 +3,7 @@ angular.module('fitTraining.training.controller', [])
     .controller('TrainingController', [
         '$scope',
         'TrainingService',
-        function ($scope, trainingService) {
+        function($scope, trainingService) {
             $scope.vm = {
                 message: ''
             };
@@ -31,28 +31,55 @@ angular.module('fitTraining.training.controller', [])
         '$scope',
         '$location',
         'TrainingService',
-        function ($scope, $location, trainingService) {
+        'ExecicesService',
+        function($scope, $location, trainingService, execicesService) {
             $scope.vm = {
                 message: '',
                 currentTraining: null
             };
+            $scope.model = { execices: [] };
 
-            trainingService.getCurrent().success(function (res) {
-                $scope.vm.currentTraining = res;
-            }).error(function (err) {
-                $scope.vm.message = err;
-            });
+            $scope.vm.addExe = function() {
+                execicesService.post($scope.vm.currentTraining.id).success(function(res) {
+                    _init();
+                }).error(function(err) {
 
-            //$scope.space = {
-            //    weight: 0.0,
-            //    height: 0.00,
-            //    activity: $scope.vm.activityList[0]
-            //};
+                });
+            }
 
-            //$scope.vm.addSettings = function () {
-            //    userSettingsService.postSettins($scope.space.weight, $scope.space.height, $scope.space.activity).then(
-            //        function (response) { $location.path('/') },
-            //        function (error) { $scope.vm.message = error.data; });
-            //}
+            var _getCurrentTraining = function() {
+                trainingService.getCurrent().success(function(res) {
+                    $scope.vm.currentTraining = res;
+                    _init();
+                }).error(function(err) {
+                    $scope.vm.message = err;
+                });
+            }();
+
+            var _init = function() {
+                execicesService.getAll($scope.vm.currentTraining.id).success(function(res) {
+
+                }).error(function(err) {
+
+                });
+            };
         }
     ]);
+//.controller('ExecicesController', [
+//    '$scope',
+//    "$location",
+//    'ExecicesService',
+//    function ($scope, $location, execicesService) {
+
+
+
+
+
+//        $scope.$watch('$scope.vm.currentTraining', function (o, n) {
+//            debugger;
+//            if (!!n) {
+//                _init();
+//            }
+//        });
+//    }
+//])

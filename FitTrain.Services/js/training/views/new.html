@@ -8,6 +8,15 @@
             <button class="btn btn-info" type="submit" ng-click="vm.addSettings()">Сохранить</button>
         </p>
     </div>-->
+    <section name="execices" ng-show="vm.currentTraining != null && vm.message == ''">
+        <h3>Упражнения</h3>
+        <ul>
+            <li ng-repeat="exe in model.execices">{{$index}}</li>
+        </ul>
+        <p>
+            <button class="btn btn-info" ng-click="vm.addExe()">Новое упражнение</button>
+        </p>
+    </section>
     <div ng-hide="vm.message == ''" class="alert alert-danger">
         {{vm.message}}
     </div>
