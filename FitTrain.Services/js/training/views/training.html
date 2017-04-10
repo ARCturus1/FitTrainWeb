@@ -1,0 +1,12 @@
+﻿<section name="training">
+    <link href="/js/training/css/style.css" rel="stylesheet" />
+    <div>
+        <div class="training-list" ng-if="model.items != null">
+            <div ng-repeat="item in model.items">{{item.StartDate}}</div>
+        </div>
+    </div>
+    <div ng-hide="vm.message == ''" class="alert alert-danger">
+        {{vm.message}}
+    </div>
+    <a class="btn btn-success" href="#/newtraining">Начать Тренировку</a>
+</section>

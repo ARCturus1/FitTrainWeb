@@ -1,0 +1,14 @@
+﻿<form role="form">
+    <h2>Текущая тренировка <b>{{vm.currentTraining.startTime | date : 'M/d/yy hh:mm a' }}</b></h2>
+    <div ng-if="vm.currentTraining == null && vm.message == ''">
+        Подождите...
+    </div>
+    <!--<div ng-if="currentTraining != null && vm.message == ''">
+        <p>
+            <button class="btn btn-info" type="submit" ng-click="vm.addSettings()">Сохранить</button>
+        </p>
+    </div>-->
+    <div ng-hide="vm.message == ''" class="alert alert-danger">
+        {{vm.message}}
+    </div>
+</form>

@@ -188,6 +188,12 @@
     <Content Include="js\authorization\css\athorization.css" />
     <Content Include="js\authorization\views\login.html" />
     <Content Include="js\authorization\views\register.html" />
+    <Content Include="js\training\css\style.css" />
+    <Content Include="js\training\training.controller.js" />
+    <Content Include="js\training\training.js" />
+    <Content Include="js\training\training.services.js" />
+    <Content Include="js\training\views\new.html" />
+    <Content Include="js\training\views\training.html" />
     <Content Include="js\userspace\css\style.css" />
     <Content Include="js\userspace\userspace.controller.js" />
     <Content Include="js\userspace\userspace.js" />

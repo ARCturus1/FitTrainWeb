@@ -9,6 +9,7 @@ namespace FitTrain.Domain.Entities.Training
     public class Exercise
     {
         [Key]
+        [Required]
         public int Id { get; set; }
 
         [ForeignKey("ExerciseType")]
