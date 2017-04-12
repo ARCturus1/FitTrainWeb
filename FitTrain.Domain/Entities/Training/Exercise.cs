@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using FitTrain.Domain.Enums;
 
 namespace FitTrain.Domain.Entities.Training
@@ -28,7 +29,22 @@ namespace FitTrain.Domain.Entities.Training
         [Key]
         public int Id { get; set; }
 
+        public string Name { get; set; }
+        public string Descriprtion { get; set; }
         public ICollection<Exercise> Exercises { get; set; }
-        public MusscleGroup? MusscleGroup { get; set; }
+        public string MusscleGroupsStr { get; set; }
+
+        [NotMapped]
+        public virtual IEnumerable<MusscleGroup> MusscleGroups
+        {
+            get
+            {
+                return MusscleGroupsStr.Split(',').Select(x => (MusscleGroup)int.Parse(x));
+            }
+            set
+            {
+                MusscleGroupsStr = string.Join(",", value.Select(x => (int)x));
+            }
+        }
     }
 }

@@ -16,6 +16,9 @@
         <p>
             <button class="btn btn-info" ng-click="vm.addExe()">Новое упражнение</button>
         </p>
+        <div>
+            <select ng-model="model.extype" ng-options="option.name for option in vm.excerciseTypesList track by option.id"></select>
+        </div>
     </section>
     <div ng-hide="vm.message == ''" class="alert alert-danger">
         {{vm.message}}

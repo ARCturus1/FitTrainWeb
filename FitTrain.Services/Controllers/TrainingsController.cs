@@ -31,10 +31,10 @@ namespace FitTrain.Services.Controllers
         }
 
         // GET: api/Trainings
-        public IQueryable<Training> GetTrainings()
+        public List<Training> GetTrainings()
         {
-            var userId = HttpContext.Current.User.Identity.GetUserId();
-            return db.Trainings.Where(x => x.ApplicationUserId == userId).Include(x => x.Exercises);
+            var userId = userManager.Users.First(x => x.UserName == User.Identity.Name).Id;
+            return db.Trainings.Where(x => x.ApplicationUserId == userId).Include(x => x.Exercises).ToList();
         }
 
         // GET: api/Trainings/5

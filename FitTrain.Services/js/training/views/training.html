@@ -1,8 +1,8 @@
 ﻿<section name="training">
     <link href="/js/training/css/style.css" rel="stylesheet" />
     <div>
-        <div class="training-list" ng-if="model.items != null">
-            <div ng-repeat="item in model.items">{{item.StartDate}}</div>
+        <div class="training-list" ng-if="model.items.length > 0">
+            <div ng-repeat="item in model.items">{{item.startTime}}</div>
         </div>
     </div>
     <div ng-hide="vm.message == ''" class="alert alert-danger">

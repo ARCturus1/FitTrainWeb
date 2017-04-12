@@ -9,7 +9,8 @@ angular.module('fitTraining.training.services', [])
                     return $http.get('api/Trainings');
                 },
                 get: function(id) {
-                    return $http.get('api/Trainings');
+                    debugger;
+                    return $http.get('api/Trainings/' + id);
                 },
                 getCurrent: function() {
                     return $http.get('api/Trainings/GetCurrentTraining');
@@ -23,19 +24,30 @@ angular.module('fitTraining.training.services', [])
     .factory('ExecicesService',
     [
         '$http',
-        function ($http) {
+        function($http) {
             return {
-                getAll: function (id) {
+                getAll: function(id) {
                     return $http.get('api/Exercises?trainingId=' + id);
                 },
-                get: function (id) {
+                get: function(id) {
                     return $http.get('api/Exercises');
                 },
-                getCurrent: function () {
+                getCurrent: function() {
                     return $http.get('api/Exercises/GetCurrentTraining');
                 },
-                post: function (id) {
-                    return $http.post('api/Exercises', { id: id });
+                post: function(id, exercise) {
+                    return $http.post('api/Exercises', { id: id, exercise: exercise });
+                }
+            }
+        }
+    ])
+    .factory('ExerciseTypesService',
+    [
+        '$http',
+        function($http) {
+            return {
+                getAll: function() {
+                    return $http.get('api/ExerciseTypes');
                 }
             }
         }

@@ -75,37 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FitTrainDbContext.cs" />
-    <Compile Include="Migrations\201612202209301_migrate.cs" />
-    <Compile Include="Migrations\201612202209301_migrate.Designer.cs">
-      <DependentUpon>201612202209301_migrate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612202228208_migrate1.cs" />
-    <Compile Include="Migrations\201612202228208_migrate1.Designer.cs">
-      <DependentUpon>201612202228208_migrate1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704061929112_1.cs" />
-    <Compile Include="Migrations\201704061929112_1.Designer.cs">
-      <DependentUpon>201704061929112_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704061949142_2.cs" />
-    <Compile Include="Migrations\201704061949142_2.Designer.cs">
-      <DependentUpon>201704061949142_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704081803548_migrate2.cs" />
-    <Compile Include="Migrations\201704081803548_migrate2.Designer.cs">
-      <DependentUpon>201704081803548_migrate2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704091741171_migrate3.cs" />
-    <Compile Include="Migrations\201704091741171_migrate3.Designer.cs">
-      <DependentUpon>201704091741171_migrate3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704091749430_migrate4.cs" />
-    <Compile Include="Migrations\201704091749430_migrate4.Designer.cs">
-      <DependentUpon>201704091749430_migrate4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704091750312_migrate5.cs" />
-    <Compile Include="Migrations\201704091750312_migrate5.Designer.cs">
-      <DependentUpon>201704091750312_migrate5.cs</DependentUpon>
+    <Compile Include="Migrations\201704122048227_migrate8.cs" />
+    <Compile Include="Migrations\201704122048227_migrate8.Designer.cs">
+      <DependentUpon>201704122048227_migrate8.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,29 +98,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612202209301_migrate.resx">
-      <DependentUpon>201612202209301_migrate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612202228208_migrate1.resx">
-      <DependentUpon>201612202228208_migrate1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704061929112_1.resx">
-      <DependentUpon>201704061929112_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704061949142_2.resx">
-      <DependentUpon>201704061949142_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704081803548_migrate2.resx">
-      <DependentUpon>201704081803548_migrate2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704091741171_migrate3.resx">
-      <DependentUpon>201704091741171_migrate3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704091749430_migrate4.resx">
-      <DependentUpon>201704091749430_migrate4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704091750312_migrate5.resx">
-      <DependentUpon>201704091750312_migrate5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704122048227_migrate8.resx">
+      <DependentUpon>201704122048227_migrate8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

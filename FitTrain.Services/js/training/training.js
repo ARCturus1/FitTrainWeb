@@ -12,6 +12,11 @@ angular.module('fitTraining.training', ['fitTraining.training.controller', 'fitT
                 {
                     templateUrl: "js/training/views/new.html",
                     controller: 'NewTraining'
+                })
+                .when("/newtraining/:id",
+                {
+                    templateUrl: "js/training/views/new.html",
+                    controller: 'NewTraining'
                 });
         }
     ]);

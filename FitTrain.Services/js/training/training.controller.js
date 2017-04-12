@@ -3,21 +3,22 @@ angular.module('fitTraining.training.controller', [])
     .controller('TrainingController', [
         '$scope',
         'TrainingService',
-        function($scope, trainingService) {
+        function ($scope, trainingService) {
             $scope.vm = {
                 message: ''
             };
             $scope.model = {
-                items: null
+                items: []
                 //lastSetting: null,
                 //mode: 2,
                 //settings: null
             };
 
-            trainingService.getAll().success(function(res) {
-                if (res.data != null)
+            trainingService.getAll().success(function (res) {
+                debugger;
+                if (res != null)
                     $scope.model.items = res;
-            }).error(function(err) {
+            }).error(function (err) {
                 $scope.vm.message = err;
             });
             //$scope.$watch('model.mode', function (o, n) {
@@ -30,38 +31,52 @@ angular.module('fitTraining.training.controller', [])
     .controller('NewTraining', [
         '$scope',
         '$location',
+        '$routeParams',
         'TrainingService',
         'ExecicesService',
-        function($scope, $location, trainingService, execicesService) {
+        'ExerciseTypesService',
+        function ($scope, $location, $routeParams, trainingService, execicesService, exerciseTypesService) {
             $scope.vm = {
                 message: '',
-                currentTraining: null
+                currentTraining: null,
+                excerciseTypesList: []
             };
-            $scope.model = { execices: [] };
+            $scope.model = {
+                execices: [],
+                extype: null
+            };
 
-            $scope.vm.addExe = function() {
-                execicesService.post($scope.vm.currentTraining.id).success(function(res) {
+            var id = $routeParams.id;
+
+
+            $scope.vm.addExe = function () {
+                var exercise = {
+                    ExerciseTypeId: $scope.model.extype.id,
+                    TrainingId: $scope.vm.currentTraining.id
+                }
+                execicesService.post($scope.vm.currentTraining.id, exercise).success(function (res) {
                     _init();
-                }).error(function(err) {
-
-                });
+                }).error();
             }
 
-            var _getCurrentTraining = function() {
-                trainingService.getCurrent().success(function(res) {
+            var _getTraining = !!id ? trainingService.get(id) : trainingService.getCurrent();
+            var _errorCalBack = function(err) {
+                $scope.vm.message = err;
+            };
+            var _getCurrentTraining = function () {
+                exerciseTypesService.getAll().success(function (res) {
+                    $scope.vm.excerciseTypesList = !!res ? res : null;
+                }).error(_errorCalBack);
+
+                _getTraining.success(function (res) {
                     $scope.vm.currentTraining = res;
                     _init();
-                }).error(function(err) {
-                    $scope.vm.message = err;
-                });
+                }).error(_errorCalBack);
             }();
+            var _init = function () {
+                execicesService.getAll($scope.vm.currentTraining.id).success(function (res) {
 
-            var _init = function() {
-                execicesService.getAll($scope.vm.currentTraining.id).success(function(res) {
-
-                }).error(function(err) {
-
-                });
+                }).error(_errorCalBack);
             };
         }
     ]);

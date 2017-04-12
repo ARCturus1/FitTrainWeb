@@ -22,9 +22,10 @@ namespace FitTrain.DataLayer
         public DbSet<Approach> Approaches { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<Training> Trainings { get; set; }
-        
+        public DbSet<ExerciseType> ExerciseTypes { get; set; }
+
         //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        
+
 
         static FitTrainDbContext()
         {
@@ -32,8 +33,6 @@ namespace FitTrain.DataLayer
         }
 
         public FitTrainDbContext() : base("FitTrainDbContext") { }
-
-        public System.Data.Entity.DbSet<FitTrain.Domain.Entities.Training.ExerciseType> ExerciseTypes { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
