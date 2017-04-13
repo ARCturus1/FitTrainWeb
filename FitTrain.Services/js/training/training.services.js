@@ -35,8 +35,8 @@ angular.module('fitTraining.training.services', [])
                 getCurrent: function() {
                     return $http.get('api/Exercises/GetCurrentTraining');
                 },
-                post: function(id, exercise) {
-                    return $http.post('api/Exercises', { id: id, exercise: exercise });
+                post: function(exercise) {
+                    return $http.post('api/Exercises', exercise);
                 }
             }
         }

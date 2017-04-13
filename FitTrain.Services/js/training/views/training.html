@@ -2,11 +2,18 @@
     <link href="/js/training/css/style.css" rel="stylesheet" />
     <div>
         <div class="training-list" ng-if="model.items.length > 0">
-            <div ng-repeat="item in model.items">{{item.startTime}}</div>
+            <h3>Тренировки</h3>
+            <div ng-repeat="item in model.items">
+                <a href="#/newtraining/{{item.id}}" class="btn btn-default btn-lg btn-block">
+                    {{item.startTime | date : 'M/d/yy hh:mm a'}}
+                </a>
+            </div>
         </div>
     </div>
     <div ng-hide="vm.message == ''" class="alert alert-danger">
         {{vm.message}}
     </div>
-    <a class="btn btn-success" href="#/newtraining">Начать Тренировку</a>
+    <p>
+        <a class="btn btn-success" href="#/newtraining">Начать Тренировку</a>
+    </p>
 </section>

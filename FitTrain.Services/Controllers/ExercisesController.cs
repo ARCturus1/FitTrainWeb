@@ -22,7 +22,9 @@ namespace FitTrain.Services.Controllers
         // GET: api/Exercises
         public IEnumerable<Exercise> GetExercises(int? trainingId)
         {
-            return trainingId.HasValue ? db.Trainings.Find(trainingId)?.Exercises : db.Exercises.ToList();
+            return trainingId.HasValue 
+                ? db.Exercises.Where(x => x.TrainingId == trainingId.Value).ToList() 
+                : db.Exercises.ToList();
         }
 
         // GET: api/Exercises/5
@@ -74,15 +76,16 @@ namespace FitTrain.Services.Controllers
         }
 
         // POST: api/Exercises
+        [HttpPost]
         [ResponseType(typeof(Exercise))]
-        public async Task<IHttpActionResult> PostExercise(int trainingId, Exercise exercise)
+        public async Task<IHttpActionResult> PostExercise([FromBody]Exercise exercise)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Trainings.First(x => x.Id == trainingId).Exercises.Add(exercise);
+            db.Exercises.Add(exercise);
             await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = exercise.Id }, exercise);

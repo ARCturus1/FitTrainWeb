@@ -48,21 +48,17 @@ angular.module('fitTraining.training.controller', [])
 
             var id = $routeParams.id;
 
-
-            $scope.vm.addExe = function () {
-                var exercise = {
-                    ExerciseTypeId: $scope.model.extype.id,
-                    TrainingId: $scope.vm.currentTraining.id
-                }
-                execicesService.post($scope.vm.currentTraining.id, exercise).success(function (res) {
-                    _init();
-                }).error();
-            }
-
-            var _getTraining = !!id ? trainingService.get(id) : trainingService.getCurrent();
-            var _errorCalBack = function(err) {
+            var _errorCalBack = function (err) {
                 $scope.vm.message = err;
             };
+            var _getTraining = !!id ? trainingService.get(id) : trainingService.getCurrent();
+
+            var _init = function () {
+                execicesService.getAll($scope.vm.currentTraining.id).success(function (res) {
+                    $scope.model.execices = res;
+                }).error(_errorCalBack);
+            };
+
             var _getCurrentTraining = function () {
                 exerciseTypesService.getAll().success(function (res) {
                     $scope.vm.excerciseTypesList = !!res ? res : null;
@@ -73,11 +69,18 @@ angular.module('fitTraining.training.controller', [])
                     _init();
                 }).error(_errorCalBack);
             }();
-            var _init = function () {
-                execicesService.getAll($scope.vm.currentTraining.id).success(function (res) {
 
+            $scope.vm.addExe = function () {
+                var exercise = {
+                    ExerciseTypeId: $scope.model.extype.id,
+                    TrainingId: $scope.vm.currentTraining.id
+                }
+                execicesService.post(exercise).success(function (res) {
+                    _init();
                 }).error(_errorCalBack);
-            };
+            }
+
+
         }
     ]);
 //.controller('ExecicesController', [
