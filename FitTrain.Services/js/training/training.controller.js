@@ -53,22 +53,21 @@ angular.module('fitTraining.training.controller', [])
             };
             var _getTraining = !!id ? trainingService.get(id) : trainingService.getCurrent();
 
-            var _init = function () {
+            var _getExercices = function () {
                 execicesService.getAll($scope.vm.currentTraining.id).success(function (res) {
                     $scope.model.execices = res;
                 }).error(_errorCalBack);
             };
-
-            var _getCurrentTraining = function () {
-                exerciseTypesService.getAll().success(function (res) {
+            var _getCurrentTraining = function() {
+                exerciseTypesService.getAll().success(function(res) {
                     $scope.vm.excerciseTypesList = !!res ? res : null;
                 }).error(_errorCalBack);
 
-                _getTraining.success(function (res) {
+                _getTraining.success(function(res) {
                     $scope.vm.currentTraining = res;
-                    _init();
+                    _getExercices();
                 }).error(_errorCalBack);
-            }();
+            };
 
             $scope.vm.addExe = function () {
                 var exercise = {
@@ -76,11 +75,14 @@ angular.module('fitTraining.training.controller', [])
                     TrainingId: $scope.vm.currentTraining.id
                 }
                 execicesService.post(exercise).success(function (res) {
-                    _init();
+                    _getExercices();
                 }).error(_errorCalBack);
             }
+            $scope.vm.openExe = function(exeId) {
+                debugger;
+            }
 
-
+            _getCurrentTraining();
         }
     ]);
 //.controller('ExecicesController', [

@@ -12,24 +12,30 @@
     </div>-->
     <section name="execices" ng-show="vm.currentTraining != null && vm.message == ''">
         <div class="row">
-            <div class="col-md-9 panel">
-                <h3 class="panel-heading">Упражнения</h3>
-                <div class="panel-body">
-                    <div class="row" ng-repeat="exe in model.execices">
-                        <div class="col-sm-9 exercise">
-                            <h4>{{exe.exerciseType.name}}</h4>
-                            <div class="row">
-                                <div class="col-xs-8 col-sm-6">
-                                    {{exe.exerciseType.descriprtion}}
-                                </div>
-                                <div class="col-xs-4 col-sm-6">
-                                    Level 2: .col-xs-4 .col-sm-6
-                                </div>
+            <!--<div class="col-md-9 panel">
+            <h3 class="panel-heading">Упражнения</h3>
+            <div class="panel-body">
+                <div class="row" ng-repeat="exe in model.execices">
+                    <div class="col-sm-9 exercise">
+                        <h4>{{exe.exerciseType.name}}</h4>
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                {{exe.exerciseType.descriprtion}}
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
+            <uib-accordion close-others="oneAtATime" class="col-md-9">
+                <div uib-accordion-group class="panel-default" heading="{{exe.exerciseType.name}}" ng-repeat="exe in model.execices"
+                     ng-click="vm.openExe(exe.id)">
+                    {{exe.exerciseType.descriprtion}}
+                    <div ng-repeat="app in exe.approaches"></div>
+                </div>
+            </uib-accordion>
             <div class="col-md-3 panel">
                 <h3 class="panel-heading">Новое упражнение</h3>
                 <div class="panel-body">
