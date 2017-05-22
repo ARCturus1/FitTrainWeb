@@ -13,3 +13,7 @@
         font-size: 20px;
         width: 100%;
     }
+
+.panel-default .active {
+    background-color: deepskyblue;
+}

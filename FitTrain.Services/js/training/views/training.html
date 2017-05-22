@@ -1,6 +1,6 @@
 ﻿<section name="training">
     <link href="/js/training/css/style.css" rel="stylesheet" />
-    <div>
+    <p>
         <div class="training-list" ng-if="model.items.length > 0">
             <h3>Тренировки</h3>
             <div ng-repeat="item in model.items">
@@ -9,7 +9,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </p>
     <div ng-hide="vm.message == ''" class="alert alert-danger">
         {{vm.message}}
     </div>

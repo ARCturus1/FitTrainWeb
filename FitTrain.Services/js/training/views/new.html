@@ -33,7 +33,41 @@
                 <div uib-accordion-group class="panel-default" heading="{{exe.exerciseType.name}}" ng-repeat="exe in model.execices"
                      ng-click="vm.openExe(exe.id)">
                     {{exe.exerciseType.descriprtion}}
-                    <div ng-repeat="app in exe.approaches"></div>
+                    <!--<div ng-repeat="app in exe.approaches">
+                        <span>Подход {{$index + 1}}</span>
+                    </div>-->
+                    <table class="table table-striped">
+                        <tr>
+                            <th>
+                                Номер
+                            </th>
+                            <th>
+                                Масса
+                            </th>
+                            <th>
+                                Повторов
+                            </th>
+                            <th>
+                                Время начала
+                            </th>
+                            <th>
+                                Продолжительность
+                            </th>
+                            <th>
+                                Интенсивность
+                            </th>
+                        </tr>
+                        <tr ng-repeat="app in exe.approaches">
+                            <td>{{$index + 1}}</td>
+                            <td>{{app.weight}}</td>
+                            <td>{{app.times}}</td>
+                            <td>{{app.startTime | date : 'hh:mm:ss a'}}</td>
+                            <td>{{app.period}}</td>
+                            <td>{{app.weight * app.times}}</td>
+                        </tr>
+
+                    </table>
+                    <button class="btn btn-success">Сделать подход</button>
                 </div>
             </uib-accordion>
             <div class="col-md-3 panel">

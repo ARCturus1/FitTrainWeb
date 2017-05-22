@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Approaches" Category="Table" Bounds="6.55919060066807,-85.5389713369847,102.86,25" Group="Collapsed" Label="Approaches" />
+    <Node Id="Approaches_EndTime" Category="Field" Bounds="610.659353520919,218.314434592301,65.7333333333333,25.96" Description="datetime" Label="EndTime" UseManualLocation="True" />
+    <Node Id="Approaches_ExcesiceId" Category="Field Foreign" Bounds="610.659353520919,274.274434592301,73.4766666666667,25.96" Description="int" Label="ExcesiceId" UseManualLocation="True" />
+    <Node Id="Approaches_Id" Category="Field Primary" Bounds="610.659353520919,162.354434592301,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="Approaches_StartTime" Category="Field" Bounds="706.392686854252,218.314434592301,70.2066666666667,25.96" Description="datetime" Label="StartTime" UseManualLocation="True" />
+    <Node Id="Approaches_Times" Category="Field" Bounds="690.659353520919,162.354434592301,50.9000000000001,25.96" Description="int" Label="Times" UseManualLocation="True" />
+    <Node Id="Approaches_Weight" Category="Field" Bounds="771.559353520919,162.354434592301,57.8466666666668,25.96" Description="numeric(18,2)" Label="Weight" UseManualLocation="True" />
+    <Node Id="AspNetRoles" Category="Table" Bounds="120.316601775518,315.688958064242,107.34,25" Group="Collapsed" Label="AspNetRoles" />
+    <Node Id="AspNetRoles_Id" Category="Field Primary" Bounds="447.358774236392,383.723434743446,50,25.96" Description="nvarchar(4000)" Label="Id" UseManualLocation="True" />
+    <Node Id="AspNetRoles_Name" Category="Field" Bounds="447.358768539777,439.683502492469,51.6966666666667,25.96" Description="nvarchar(256)" Label="Name" UseManualLocation="True" />
+    <Node Id="AspNetUserClaims" Category="Table" Bounds="167.503495042697,205.680149008231,137.773333333333,25" Group="Collapsed" Label="AspNetUserClaims" />
+    <Node Id="AspNetUserClaims_ClaimType" Category="Field Optional" Bounds="408.927900449865,365.539218271259,74.45,25.9599999999999" Description="nvarchar(4000)" Label="ClaimType" UseManualLocation="True" />
+    <Node Id="AspNetUserClaims_ClaimValue" Category="Field Optional" Bounds="513.377858945958,365.539218267358,78.34,25.96" Description="nvarchar(4000)" Label="ClaimValue" UseManualLocation="True" />
+    <Node Id="AspNetUserClaims_Id" Category="Field Primary" Bounds="408.927833317296,309.579196294702,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="AspNetUserClaims_UserId" Category="Field Foreign" Bounds="488.927861186966,309.579196282998,54.0466666666666,25.96" Description="nvarchar(4000)" Label="UserId" UseManualLocation="True" />
+    <Node Id="AspNetUserLogins" Category="Table" Bounds="249.479843686037,150.587141883211,137.53,25" Group="Collapsed" Label="AspNetUserLogins" />
+    <Node Id="AspNetUserLogins_LoginProvider" Category="Field Primary" Bounds="229.715961122405,214.85397110106,93.5366666666667,25.96" Description="nvarchar(4000)" Label="LoginProvider" UseManualLocation="True" />
+    <Node Id="AspNetUserLogins_ProviderKey" Category="Field Primary" Bounds="313.762635520191,158.893979645982,82.98,25.96" Description="nvarchar(4000)" Label="ProviderKey" UseManualLocation="True" />
+    <Node Id="AspNetUserLogins_UserId" Category="Field Primary" Bounds="229.715966005217,158.893979645982,54.0466666666667,25.96" Description="nvarchar(4000)" Label="UserId" UseManualLocation="True" />
+    <Node Id="AspNetUserRoles" Category="Table" Bounds="169.592878209243,260.675744480226,131.126666666667,25.0088090560107" Group="Collapsed" Label="AspNetUserRoles" />
+    <Node Id="AspNetUserRoles_RoleId" Category="Field Primary" Bounds="481.320019071605,202.713716178889,53.2999999999999,25.96" Description="nvarchar(4000)" Label="RoleId" UseManualLocation="True" />
+    <Node Id="AspNetUserRoles_UserId" Category="Field Primary" Bounds="481.320037789053,258.673707633967,54.0466666666666,25.96" Description="nvarchar(4000)" Label="UserId" UseManualLocation="True" />
+    <Node Id="AspNetUsers" Category="Table" Bounds="181.925323852289,95.680149008231,108.086666666666,25" Group="Collapsed" Label="AspNetUsers" />
+    <Node Id="AspNetUsers_AccessFailedCount" Category="Field" Bounds="325.715061319323,-79.0835509528696,118.11,25.96" Description="int" Label="AccessFailedCount" UseManualLocation="True" />
+    <Node Id="AspNetUsers_BirthDate" Category="Field" Bounds="574.5317306267,-246.96355248971,69.6800000000001,25.96" Description="datetime" Label="BirthDate" UseManualLocation="True" />
+    <Node Id="AspNetUsers_Email" Category="Field Optional" Bounds="325.715053397194,-246.96355248971,50,25.96" Description="nvarchar(256)" Label="Email" UseManualLocation="True" />
+    <Node Id="AspNetUsers_EmailConfirmed" Category="Field" Bounds="325.715048115775,-135.043550195578,104.093333333333,25.96" Description="bit" Label="EmailConfirmed" UseManualLocation="True" />
+    <Node Id="AspNetUsers_Gender" Category="Field" Bounds="485.715060506797,-246.96355248971,58.8166666666667,25.96" Description="bit" Label="Gender" UseManualLocation="True" />
+    <Node Id="AspNetUsers_Id" Category="Field Primary" Bounds="405.715053397194,-246.96355248971,50,25.96" Description="nvarchar(4000)" Label="Id" UseManualLocation="True" />
+    <Node Id="AspNetUsers_LockoutEnabled" Category="Field" Bounds="459.808386121133,-135.043550195578,104.343333333333,25.96" Description="bit" Label="LockoutEnabled" UseManualLocation="True" />
+    <Node Id="AspNetUsers_LockoutEndDateUtc" Category="Field Optional" Bounds="473.825073304082,-79.0835509528696,124.716666666667,25.96" Description="datetime" Label="LockoutEndDateUtc" UseManualLocation="True" />
+    <Node Id="AspNetUsers_PasswordHash" Category="Field Optional" Bounds="451.201704219603,-191.003538012139,96.0566666666666,25.96" Description="nvarchar(4000)" Label="PasswordHash" UseManualLocation="True" />
+    <Node Id="AspNetUsers_PhoneNumber" Category="Field Optional" Bounds="577.258411106309,-191.003538012139,97.2133333333334,25.96" Description="nvarchar(4000)" Label="PhoneNumber" UseManualLocation="True" />
+    <Node Id="AspNetUsers_PhoneNumberConfirmed" Category="Field" Bounds="325.715058881745,-23.1235479014456,152.98,25.96" Description="bit" Label="PhoneNumberConfirmed" UseManualLocation="True" />
+    <Node Id="AspNetUsers_SecurityStamp" Category="Field Optional" Bounds="325.715051975274,-191.003538012139,95.4866666666667,25.96" Description="nvarchar(4000)" Label="SecurityStamp" UseManualLocation="True" />
+    <Node Id="AspNetUsers_TwoFactorEnabled" Category="Field" Bounds="594.151745252168,-135.043550195578,115.97,25.96" Description="bit" Label="TwoFactorEnabled" UseManualLocation="True" />
+    <Node Id="AspNetUsers_UserName" Category="Field" Bounds="674.211729001648,-246.96355248971,75.4833333333333,25.96" Description="nvarchar(256)" Label="UserName" UseManualLocation="True" />
+    <Node Id="Database" Category="Database" Bounds="-45.481880901687,-146.53731310263,508.605205846648,507.226171166871" Group="Expanded" Label="db.sdf" LayoutSettings="ForceDirected" UseManualLocation="True" />
+    <Node Id="DietDays" Category="Table" Bounds="356.034916570807,-106.539083827524,87.0867166938802,25.0037414497887" Group="Collapsed" Label="DietDays" />
+    <Node Id="DietDays_DietMode" Category="Field" Bounds="355.438059895833,-97.5527134043985,72.8133333333333,25.96" Description="int" Label="DietMode" UseManualLocation="True" />
+    <Node Id="DietDays_DietPeroidId" Category="Field Foreign" Bounds="275.43804280599,-41.5926075084024,85.6533333333332,25.96" Description="int" Label="DietPeroidId" UseManualLocation="True" />
+    <Node Id="DietDays_Id" Category="Field Primary" Bounds="275.438049316406,-97.5527134043985,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="DietPeriods" Category="Table" Bounds="303.560024980147,-48.6449504511214,100.488441248898,25.0019615971279" Group="Collapsed" Label="DietPeriods" />
+    <Node Id="DietPeriods_CreatedDate" Category="Field" Bounds="616.372392171392,-70.9328924445056,86.26,25.96" Description="datetime" Label="CreatedDate" UseManualLocation="True" />
+    <Node Id="DietPeriods_Id" Category="Field Primary" Bounds="536.372387288579,-70.9328924445056,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="DietPeriods_UserSettingId" Category="Field Foreign" Bounds="536.372381998866,-14.9728857306384,91.5933333333334,25.96" Description="int" Label="UserSettingId" UseManualLocation="True" />
+    <Node Id="ExerciseTypes" Category="Table" Bounds="-25.481880901687,40.6801265820265,111.703333333333,25" Group="Collapsed" Label="ExerciseTypes" />
+    <Node Id="ExerciseTypes_Descriprtion" Category="Field Optional" Bounds="133.184249276502,-144.987004814808,84.4266666666667,25.96" Description="nvarchar(4000)" Label="Descriprtion" UseManualLocation="True" />
+    <Node Id="ExerciseTypes_Id" Category="Field Primary" Bounds="133.184249276502,-200.947004814808,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="ExerciseTypes_MusscleGroupsStr" Category="Field Optional" Bounds="133.184249276502,-89.0270048148075,115.08,25.96" Description="nvarchar(4000)" Label="MusscleGroupsStr" UseManualLocation="True" />
+    <Node Id="ExerciseTypes_Name" Category="Field Optional" Bounds="213.184249276502,-200.947004814808,51.6966666666667,25.96" Description="nvarchar(4000)" Label="Name" UseManualLocation="True" />
+    <Node Id="Exercises" Category="Table" Bounds="48.1529339554393,-14.3198734179735,86.9400000000001,25" Group="Collapsed" Label="Exercises" />
+    <Node Id="Exercises_ExerciseTypeId" Category="Field Foreign" Description="int" Label="ExerciseTypeId" UseManualLocation="True" />
+    <Node Id="Exercises_Id" Category="Field Primary" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="Exercises_TrainingId" Category="Field Foreign" Description="int" Label="TrainingId" UseManualLocation="True" />
+    <Node Id="Trainings" Category="Table" Bounds="116.221552431647,40.6801265820265,87.0766666666668,24.9999999999999" Group="Collapsed" Label="Trainings" />
+    <Node Id="Trainings_ApplicationUserId" Category="Field Foreign" Bounds="319.77541427832,164.569249692759,114.15,25.96" Description="nvarchar(4000)" Label="ApplicationUserId" UseManualLocation="True" />
+    <Node Id="Trainings_EndTime" Category="Field Optional" Bounds="299.56875432552,108.609262052378,65.7333333333333,25.96" Description="datetime" Label="EndTime" UseManualLocation="True" />
+    <Node Id="Trainings_Id" Category="Field Primary" Bounds="219.568767549804,108.609262052378,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="Trainings_StartTime" Category="Field" Bounds="219.568766736002,164.569249692759,70.2066666666667,25.96" Description="datetime" Label="StartTime" UseManualLocation="True" />
+    <Node Id="UserSettings" Category="Table" Bounds="239.925618702408,10.1485855396123,106.426666666667,25" Group="Collapsed" Label="UserSettings" />
+    <Node Id="UserSettings_ActivityOfHuman" Category="Field" Bounds="709.510852990516,162.25948115658,110.13,25.96" Description="int" Label="ActivityOfHuman" UseManualLocation="True" />
+    <Node Id="UserSettings_AddedDate" Category="Field" Bounds="599.430842004188,162.25948115658,80.08,25.96" Description="datetime" Label="AddedDate" UseManualLocation="True" />
+    <Node Id="UserSettings_ApplicationUserId" Category="Field Foreign" Bounds="599.430845666297,218.219473244692,114.15,25.96" Description="nvarchar(4000)" Label="ApplicationUserId" UseManualLocation="True" />
+    <Node Id="UserSettings_Height" Category="Field" Bounds="679.430824113198,106.299500445818,55.6266666666667,25.9600000000001" Description="numeric(18,2)" Label="Height" UseManualLocation="True" />
+    <Node Id="UserSettings_Id" Category="Field Primary" Bounds="599.430833417342,106.299500445818,50,25.96" Description="int" Label="Id" UseManualLocation="True" />
+    <Node Id="UserSettings_Weight" Category="Field" Bounds="765.057487948169,106.299500445818,57.8466666666667,25.9600000000001" Description="numeric(18,2)" Label="Weight" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="Approaches" Target="Approaches_EndTime" Category="Contains" />
+    <Link Source="Approaches" Target="Approaches_ExcesiceId" Category="Contains" />
+    <Link Source="Approaches" Target="Approaches_Id" Category="Contains" />
+    <Link Source="Approaches" Target="Approaches_StartTime" Category="Contains" />
+    <Link Source="Approaches" Target="Approaches_Times" Category="Contains" />
+    <Link Source="Approaches" Target="Approaches_Weight" Category="Contains" />
+    <Link Source="Approaches_ExcesiceId" Target="Exercises_Id" Category="Foreign Key" Label="FK_dbo.Approaches_dbo.Exercises_ExcesiceId" />
+    <Link Source="AspNetRoles" Target="AspNetRoles_Id" Category="Contains" />
+    <Link Source="AspNetRoles" Target="AspNetRoles_Name" Category="Contains" />
+    <Link Source="AspNetUserClaims" Target="AspNetUserClaims_ClaimType" Category="Contains" />
+    <Link Source="AspNetUserClaims" Target="AspNetUserClaims_ClaimValue" Category="Contains" />
+    <Link Source="AspNetUserClaims" Target="AspNetUserClaims_Id" Category="Contains" />
+    <Link Source="AspNetUserClaims" Target="AspNetUserClaims_UserId" Category="Contains" />
+    <Link Source="AspNetUserClaims_UserId" Target="AspNetUsers_Id" Category="Foreign Key" Label="FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId" />
+    <Link Source="AspNetUserLogins" Target="AspNetUserLogins_LoginProvider" Category="Contains" />
+    <Link Source="AspNetUserLogins" Target="AspNetUserLogins_ProviderKey" Category="Contains" />
+    <Link Source="AspNetUserLogins" Target="AspNetUserLogins_UserId" Category="Contains" />
+    <Link Source="AspNetUserLogins_UserId" Target="AspNetUsers_Id" Category="Foreign Key" Label="FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId" />
+    <Link Source="AspNetUserRoles" Target="AspNetUserRoles_RoleId" Category="Contains" />
+    <Link Source="AspNetUserRoles" Target="AspNetUserRoles_UserId" Category="Contains" />
+    <Link Source="AspNetUserRoles_RoleId" Target="AspNetRoles_Id" Category="Foreign Key" Label="FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId" />
+    <Link Source="AspNetUserRoles_UserId" Target="AspNetUsers_Id" Category="Foreign Key" Label="FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_AccessFailedCount" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_BirthDate" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_Email" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_EmailConfirmed" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_Gender" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_Id" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_LockoutEnabled" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_LockoutEndDateUtc" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_PasswordHash" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_PhoneNumber" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_PhoneNumberConfirmed" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_SecurityStamp" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_TwoFactorEnabled" Category="Contains" />
+    <Link Source="AspNetUsers" Target="AspNetUsers_UserName" Category="Contains" />
+    <Link Source="Database" Target="Approaches" Category="Contains" />
+    <Link Source="Database" Target="AspNetRoles" Category="Contains" />
+    <Link Source="Database" Target="AspNetUserClaims" Category="Contains" />
+    <Link Source="Database" Target="AspNetUserLogins" Category="Contains" />
+    <Link Source="Database" Target="AspNetUserRoles" Category="Contains" />
+    <Link Source="Database" Target="AspNetUsers" Category="Contains" />
+    <Link Source="Database" Target="DietDays" Category="Contains" />
+    <Link Source="Database" Target="DietPeriods" Category="Contains" />
+    <Link Source="Database" Target="ExerciseTypes" Category="Contains" />
+    <Link Source="Database" Target="Exercises" Category="Contains" />
+    <Link Source="Database" Target="Trainings" Category="Contains" />
+    <Link Source="Database" Target="UserSettings" Category="Contains" />
+    <Link Source="DietDays" Target="DietDays_DietMode" Category="Contains" />
+    <Link Source="DietDays" Target="DietDays_DietPeroidId" Category="Contains" />
+    <Link Source="DietDays" Target="DietDays_Id" Category="Contains" />
+    <Link Source="DietDays_DietPeroidId" Target="DietPeriods_Id" Category="Foreign Key" Label="FK_dbo.DietDays_dbo.DietPeriods_DietPeroidId" />
+    <Link Source="DietPeriods" Target="DietPeriods_CreatedDate" Category="Contains" />
+    <Link Source="DietPeriods" Target="DietPeriods_Id" Category="Contains" />
+    <Link Source="DietPeriods" Target="DietPeriods_UserSettingId" Category="Contains" />
+    <Link Source="DietPeriods_UserSettingId" Target="UserSettings_Id" Category="Foreign Key" Label="FK_dbo.DietPeriods_dbo.UserSettings_UserSettingId" />
+    <Link Source="ExerciseTypes" Target="ExerciseTypes_Descriprtion" Category="Contains" />
+    <Link Source="ExerciseTypes" Target="ExerciseTypes_Id" Category="Contains" />
+    <Link Source="ExerciseTypes" Target="ExerciseTypes_MusscleGroupsStr" Category="Contains" />
+    <Link Source="ExerciseTypes" Target="ExerciseTypes_Name" Category="Contains" />
+    <Link Source="Exercises" Target="Exercises_ExerciseTypeId" Category="Contains" />
+    <Link Source="Exercises" Target="Exercises_Id" Category="Contains" />
+    <Link Source="Exercises" Target="Exercises_TrainingId" Category="Contains" />
+    <Link Source="Exercises_ExerciseTypeId" Target="ExerciseTypes_Id" Category="Foreign Key" Label="FK_dbo.Exercises_dbo.ExerciseTypes_ExerciseTypeId" />
+    <Link Source="Exercises_TrainingId" Target="Trainings_Id" Category="Foreign Key" Label="FK_dbo.Exercises_dbo.Trainings_TrainingId" />
+    <Link Source="Trainings" Target="Trainings_ApplicationUserId" Category="Contains" />
+    <Link Source="Trainings" Target="Trainings_EndTime" Category="Contains" />
+    <Link Source="Trainings" Target="Trainings_Id" Category="Contains" />
+    <Link Source="Trainings" Target="Trainings_StartTime" Category="Contains" />
+    <Link Source="Trainings_ApplicationUserId" Target="AspNetUsers_Id" Category="Foreign Key" Label="FK_dbo.Trainings_dbo.AspNetUsers_ApplicationUserId" />
+    <Link Source="UserSettings" Target="UserSettings_ActivityOfHuman" Category="Contains" />
+    <Link Source="UserSettings" Target="UserSettings_AddedDate" Category="Contains" />
+    <Link Source="UserSettings" Target="UserSettings_ApplicationUserId" Category="Contains" />
+    <Link Source="UserSettings" Target="UserSettings_Height" Category="Contains" />
+    <Link Source="UserSettings" Target="UserSettings_Id" Category="Contains" />
+    <Link Source="UserSettings" Target="UserSettings_Weight" Category="Contains" />
+    <Link Source="UserSettings_ApplicationUserId" Target="AspNetUsers_Id" Category="Foreign Key" Label="FK_dbo.UserSettings_dbo.AspNetUsers_ApplicationUserId" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Database" />
+    <Category Id="Field" />
+    <Category Id="Field Foreign" />
+    <Category Id="Field Optional" />
+    <Category Id="Field Primary" />
+    <Category Id="Foreign Key" />
+    <Category Id="Table" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="Description" Label="Description" Description="Description" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Test Project" ValueLabel="Test Project">
+      <Condition Expression="HasCategory('CodeMap_TestProject')" />
+      <Setter Property="Icon" Value="CodeMap_TestProject" />
+      <Setter Property="Background" Value="#FF307A69" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Web Project" ValueLabel="Web Project">
+      <Condition Expression="HasCategory('CodeMap_WebProject')" />
+      <Setter Property="Icon" Value="CodeMap_WebProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Windows Store Project" ValueLabel="Windows Store Project">
+      <Condition Expression="HasCategory('CodeMap_WindowsStoreProject')" />
+      <Setter Property="Icon" Value="CodeMap_WindowsStoreProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Phone Project" ValueLabel="Phone Project">
+      <Condition Expression="HasCategory('CodeMap_PhoneProject')" />
+      <Setter Property="Icon" Value="CodeMap_PhoneProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Portable Library" ValueLabel="Portable Library">
+      <Condition Expression="HasCategory('CodeMap_PortableLibraryProject')" />
+      <Setter Property="Icon" Value="CodeMap_PortableLibraryProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="WPF Project" ValueLabel="WPF Project">
+      <Condition Expression="HasCategory('CodeMap_WpfProject')" />
+      <Setter Property="Icon" Value="CodeMap_WpfProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="VSIX Project" ValueLabel="VSIX Project">
+      <Condition Expression="HasCategory('CodeMap_VsixProject')" />
+      <Setter Property="Icon" Value="CodeMap_VsixProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Modeling Project" ValueLabel="Modeling Project">
+      <Condition Expression="HasCategory('CodeMap_ModelingProject')" />
+      <Setter Property="Icon" Value="CodeMap_ModelingProject" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="Has category">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True">
+      <Condition Expression="HasCategory('InheritsFrom')" />
+      <Setter Property="Stroke" Value="#FF00A600" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#8000A600" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Calls" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Calls')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Function Pointer" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FunctionPointer')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Write" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_FieldWrite')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="DrawArrow" Value="true" />
+      <Setter Property="IsHidden" Value="false" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Return" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_ReturnTypeLink')" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="References" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('References')" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Uses Attribute" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeSchema_AttributeUse')" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Solution Folder" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CodeMap_SolutionFolder')" />
+      <Setter Property="Background" Value="#FFDEBA83" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Project Reference" ValueLabel="Project Reference">
+      <Condition Expression="HasCategory('CodeMap_ProjectReference')" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="External Reference" ValueLabel="External Reference">
+      <Condition Expression="HasCategory('CodeMap_ExternalReference')" />
+      <Setter Property="Stroke" Value="#9A9A9A" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+  </Styles>
+</DirectedGraph>

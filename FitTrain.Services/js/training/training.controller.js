@@ -79,7 +79,7 @@ angular.module('fitTraining.training.controller', [])
                 }).error(_errorCalBack);
             }
             $scope.vm.openExe = function(exeId) {
-                debugger;
+                //debugger;
             }
 
             _getCurrentTraining();

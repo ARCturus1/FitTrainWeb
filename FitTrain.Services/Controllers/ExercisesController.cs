@@ -23,7 +23,7 @@ namespace FitTrain.Services.Controllers
         public IEnumerable<Exercise> GetExercises(int? trainingId)
         {
             return trainingId.HasValue 
-                ? db.Exercises.Where(x => x.TrainingId == trainingId.Value).ToList() 
+                ? db.Exercises.Where(x => x.TrainingId == trainingId.Value).Include(x => x.Approaches).ToList() 
                 : db.Exercises.ToList();
         }
 

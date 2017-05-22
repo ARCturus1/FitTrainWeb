@@ -10,7 +10,17 @@ angular.module('fitTraining.userspace.controller', [])
             $scope.model = {
                 lastSetting: null,
                 mode: 2,
-                settings: null
+                settings: null,
+                dietPeriod: {
+                    days: [
+                        { mode: 1, desc: 'Жиросжигание', cls: 'active' },
+                        { mode: 1, desc: 'Жиросжигание' },
+                        { mode: 1, desc: 'Жиросжигание' },
+                        { mode: 2, desc: 'Поддержание' },
+                        { mode: 2, desc: 'Поддержание' }
+                    ],
+                    startDate : new Date(2017, 5, 1)
+                }
             };
 
             $scope.$watch('model.mode', function (o, n) {

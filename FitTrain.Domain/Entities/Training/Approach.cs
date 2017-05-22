@@ -19,6 +19,8 @@ namespace FitTrain.Domain.Entities.Training
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
+        public virtual TimeSpan Period => (this.EndTime - this.StartTime);
+
         public virtual Exercise Exercise { get; set; }
     }
 }

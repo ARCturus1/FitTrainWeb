@@ -1,38 +1,51 @@
 ﻿<section name="userspace">
-    <link href="/js/userspace/css/style.css" rel="stylesheet" />
-    <div>
-        <div class="btn-group">
-            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'1'">Left</label>
-            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'2'">Middle</label>
-            <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'3'">Right</label>
+    <link href="/js/userspace/css/style.css" rel="stylesheet"/>
+    <div class="row">
+        <div class="col-md-5 col-xs-5">
+            <div class="btn-group">
+                <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'1'">Жиросжигание</label>
+                <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'2'">Поддержание</label>
+                <label class="btn btn-primary" ng-model="model.mode" uib-btn-radio="'3'">Массанабор</label>
+            </div>
+            <div class="userspace" ng-if="model.settings != null">
+                <table>
+                    <tr>
+                        <td>Вес:</td>
+                        <td>{{model.settings.weight}},кг.</td>
+                    </tr>
+                    <tr>
+                        <td>Дневная норма калорийности:</td>
+                        <td>{{model.settings.dci}},Ккал.</td>
+                    </tr>
+                    <tr>
+                        <td>Дневная норма углеводов:</td>
+                        <td>{{model.settings.carbs}},гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Дневная норма белков:</td>
+                        <td>{{model.settings.proteins}},гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Дневная норма жиров:</td>
+                        <td>{{model.settings.fats}},гр.</td>
+                    </tr>
+                </table>
+            </div>
+            <a class="btn btn-success" href="#/newUserSpace">Добавить параметры</a>
         </div>
-        <div class="userspace" ng-if="model.settings != null">
-            <table>
-                <tr>
-                    <td>Вес:</td>
-                    <td>{{model.settings.weight}},кг.</td>
-                </tr>
-                <tr>
-                    <td>Дневная норма калорийности:</td>
-                    <td>{{model.settings.dci}},Ккал.</td>
-                </tr>
-                <tr>
-                    <td>Дневная норма углеводов:</td>
-                    <td>{{model.settings.carbs}},гр.</td>
-                </tr>
-                <tr>
-                    <td>Дневная норма белков:</td>
-                    <td>{{model.settings.proteins}},гр.</td>
-                </tr>
-                <tr>
-                    <td>Дневная норма жиров:</td>
-                    <td>{{model.settings.fats}},гр.</td>
-                </tr>
-            </table>
+        <div class="col-md-4 col-xs-4">
+            <uib-accordion close-others="oneAtATime" class="col-md-9">
+                <div uib-accordion-group class="panel-default" ng-class="{{day.cls}}" heading="{{$index + 1}} день - {{day.desc}}" ng-repeat="day in model.dietPeriod.days"
+                     ng-click="vm.openTrainingDay(day.id)">
+                    {{$index + 1}} день - {{day.desc}}
+                    <!--{{period.descriprtion}}
+                    <div ng-repeat="day in period.days"></div>-->
+                </div>
+            </uib-accordion>
+            <a class="btn btn-success" href="#/newUserSpace">Добавить день питания</a>
         </div>
     </div>
     <div ng-hide="vm.message == ''" class="alert alert-danger">
         {{vm.message}}
     </div>
-    <a class="btn btn-success" href="#/newUserSpace">Добавить параметры</a>
 </section>
